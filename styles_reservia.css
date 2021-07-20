@@ -1,0 +1,46 @@
+@font-face
+{
+    font-family: "Raleway";
+    src: url(fonts/Raleway-Regular.ttf) format('truetype');
+}
+
+body
+{
+    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#heb_s #pop_s
+{
+    border-radius: 2em;
+    background-color: lightgrey;
+}
+
+.heb .pop
+{
+    border: 2em white solid;
+    border-radius: 2em;
+    max-width: 20%;     /*À ENLEVER ABSOLUMENT pour le responsive car pas adapté au téléphone*/
+}
+
+.activ
+{
+    border-radius: 2em;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_el
+{
+    width: 30%;
+}
