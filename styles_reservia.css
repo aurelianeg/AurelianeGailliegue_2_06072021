@@ -11,31 +11,154 @@ body
     flex-wrap: wrap;
 }
 
+header, #heb_s, #pop_s, #activ_s
+{
+    margin: 2em;
+}
+
+#logo
+{
+    max-width: 30%;
+}
+
+#inscription
+{
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    margin: 0.5em;
+    font-weight: bold;
+    font-size: small;
+    color: #0065FC;
+}
+
+nav ul
+{
+    display: flex;
+    flex-direction: row;
+}
+
 ul
 {
     list-style-type: none;
 }
 
-#heb_s #pop_s
+h1
 {
-    border-radius: 2em;
-    background-color: lightgrey;
+    font-weight: bold;
+    font-size: large;
 }
 
-.heb .pop
+h2
 {
-    border: 2em white solid;
-    border-radius: 2em;
-    max-width: 20%;     /*À ENLEVER ABSOLUMENT pour le responsive car pas adapté au téléphone*/
+    font-weight: bold;
+    font-size: medium;
+}
+
+li, p
+{
+    font-size: small;
+}
+
+#filters
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.icons
+{
+    fill: #0065FC;
+    color: #0065FC;
+    height: 1.5em;
+}
+
+#info_icon
+{
+    border: 0.1em #F2F2F2 solid;
+    border-radius: 1em;
+    fill: #0065FC;
+    color: #0065FC;
+    width: 1.5em;
+    height: 1.5em;
+
+}
+
+#heb_s, #pop_s
+{
+    border-radius: 0.75em;
+    background-color: #F2F2F2;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#heb_s .s_title, #pop_s .s_title, .s_remark
+{
+    margin-left: 1em;
+}
+
+.s_title, .s_remark
+{
+    min-width: 100%;
+}
+
+.heb, .pop
+{
+    border: 3px white solid;
+    border-radius: 0.75em;
+    background-color: white;
+    box-shadow: 0.5em 0.5em 1em #F2F2F2;
+    margin: 1em;
+}
+
+.heb_img, .pop_img, .act_img
+{
+    max-width: 100%;
+}
+
+.heb_img
+{
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+}
+
+.pop_img
+{
+    border-top-left-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+}
+
+.heb h2, .heb p, .pop h2, .pop p, .activ h2
+{
+    margin: 10px;
+}
+
+#activ_s
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .activ
 {
-    border-radius: 2em;
+    border: 0px white none;
+    border-radius: 0.75em;
+    background-color: white;
+    box-shadow: 0.5em 0.5em 1em #F2F2F2;
+    margin: 1em;
+}
+
+.act_img
+{
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
 }
 
 footer
 {
+    background-color: #F2F2F2;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -43,4 +166,15 @@ footer
 .footer_el
 {
     width: 30%;
+    margin: 1em;
 }
+
+.footer_el h2
+{
+    margin-bottom: 1em;
+}
+
+
+/* Bleu : #0065FC
+Bleu plus clair : #DEEBFF
+Gris : #F2F2F2*/
