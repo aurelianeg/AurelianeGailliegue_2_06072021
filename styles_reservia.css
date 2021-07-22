@@ -53,7 +53,7 @@ h1
     font-size: large;
 }
 
-h2
+h2, input
 {
     font-weight: bold;
     font-size: medium;
@@ -121,8 +121,9 @@ p
 #research_type
 {
     border: 1px #F2F2F2 solid;
-    padding-left: 1em;
-    padding-right: 4em;
+    /*padding-left: 1em;
+    padding-right: 4em;*/
+    padding: 1em;
 }
 
 #research_button
@@ -131,8 +132,14 @@ p
     color: white;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
+    /*padding-left: 1em;
+    padding-right: 1em;*/
+    padding: 1em;
+}
+
+input
+{
+    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
 }
 
 #icon_info
