@@ -115,25 +115,25 @@ p
     border-bottom-left-radius: 1em;
     width: 1em;
     height: 1em;
-    padding: 1em;
+    padding: 1.1em;
 }
 
 #research_type
 {
     border: 1px #F2F2F2 solid;
-    /*padding-left: 1em;
-    padding-right: 4em;*/
+    color: black;    /* Changer couleur du texte en noir */
     padding: 1em;
 }
 
+/* Voir d'où sort cet espace entre les deux*/
+
 #research_button
 {
+    border: 0px white solid;
     background-color: #0065FC;
     color: white;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
-    /*padding-left: 1em;
-    padding-right: 1em;*/
     padding: 1em;
 }
 
