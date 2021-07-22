@@ -1,8 +1,9 @@
 @font-face
 {
     font-family: "Raleway";
-    src: url(fonts/Raleway-Regular.ttf) format('truetype');
+    src: url(fonts/Raleway-Medium.ttf) format('truetype');
 }
+/* Peut-être définir plusieurs polices selon l'aspect */
 
 body
 {
@@ -18,29 +19,32 @@ header, #heb_s, #pop_s, #activ_s
 
 #logo
 {
-    max-width: 30%;
+    max-height: 2.5em;
+    padding-bottom: 1em;
 }
 
 #inscription
 {
     position: absolute;
-    top: 0em;
-    right: 0em;
-    margin: 0.5em;
+    top: 0;
+    right: 0;
+    padding: 2em;
     font-weight: bold;
     font-size: small;
     color: #0065FC;
 }
 
-nav ul
+ul
 {
+    list-style-type: none;
     display: flex;
     flex-direction: row;
 }
 
-ul
+li
 {
-    list-style-type: none;
+    font-size: small;
+    padding: 2em;
 }
 
 h1
@@ -55,7 +59,7 @@ h2
     font-size: medium;
 }
 
-li, p
+p
 {
     font-size: small;
 }
@@ -64,24 +68,90 @@ li, p
 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0.5em;
 }
 
-.icons
+.filter
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5em;
+    padding-right: 1em;
+    border: 2px #F2F2F2 solid;
+    border-radius: 2em;
+}
+
+.icons_f
 {
     fill: #0065FC;
     color: #0065FC;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 2em;
+    background-color: #DEEBFF;
 }
 
-#info_icon
+#research_s
 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+}
+
+#icon_place
+{
+    background-color: #F2F2F2;
+    fill: #0065FC;
+    color: #0065FC;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    width: 1em;
+    height: 1em;
+    padding: 1em;
+}
+
+#research_type
+{
+    border: 1px #F2F2F2 solid;
+    padding-left: 1em;
+    padding-right: 4em;
+}
+
+#research_button
+{
+    background-color: #0065FC;
+    color: white;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#icon_info
+{
+    fill: #0065FC;
+    color: #0065FC;
+    width: 0.5em;
+    height: 0.5em;
+    padding: 0.5em;
+    margin-right: 0.5em;
     border: 0.1em #F2F2F2 solid;
-    border-radius: 1em;
-    fill: #0065FC;
-    color: #0065FC;
-    width: 1.5em;
-    height: 1.5em;
+    border-radius: 2em;
+}
 
+#info
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #heb_s, #pop_s
@@ -112,9 +182,17 @@ li, p
     margin: 1em;
 }
 
+.pop
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .heb_img, .pop_img, .act_img
 {
     max-width: 100%;
+    width: 200px;
 }
 
 .heb_img
@@ -129,9 +207,27 @@ li, p
     border-bottom-left-radius: 0.6em;
 }
 
-.heb h2, .heb p, .pop h2, .pop p, .activ h2
+.heb img+div, .pop img+div, .activ img+div
 {
     margin: 10px;
+}
+
+.star_y, .star_n
+{
+    width: 1em;
+    height: 1em;
+}
+
+.star_y
+{
+    fill: #0065FC;
+    color: #0065FC;
+}
+
+.star_n
+{
+    fill: #F2F2F2;
+    color: #F2F2F2;
 }
 
 #activ_s
@@ -183,6 +279,16 @@ a, a:visited
 a:hover, a.active
 {
     color: #0065FC
+}
+
+#inscription:hover
+{
+    background-color: #DEEBFF;
+}
+
+.filter:hover
+{
+    background-color: #F2F2F2;
 }
 
 /* Bleu : #0065FC
