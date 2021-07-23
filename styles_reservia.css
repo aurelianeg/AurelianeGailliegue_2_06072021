@@ -1,13 +1,26 @@
 @font-face
 {
     font-family: "Raleway";
-    src: url(fonts/Raleway-Medium.ttf) format('truetype');
+    src: url(fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face
+{
+    font-family: "Raleway";
+    src: url(fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: 500;
+}
+
+html
+{
+    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 300;
 }
 /* Peut-être définir plusieurs polices selon l'aspect */
 
 body
 {
-    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
 }
@@ -118,14 +131,17 @@ p
     padding: 1.1em;
 }
 
+#research_form
+{
+    display: flex;      /* No space between type and button */
+}
+
 #research_type
 {
     border: 1px #F2F2F2 solid;
     color: black;    /* Changer couleur du texte en noir */
     padding: 1em;
 }
-
-/* Voir d'où sort cet espace entre les deux*/
 
 #research_button
 {
