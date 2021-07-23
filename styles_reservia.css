@@ -1,3 +1,12 @@
+
+/* --------------- Color chart --------------- */
+
+/* Blue: #0065FC
+Lighter blue: #DEEBFF
+Grey: #F2F2F2*/
+
+/* --------------- Fonts --------------- */
+
 @font-face
 {
     font-family: "Raleway";
@@ -11,287 +20,35 @@
     src: url(fonts/Raleway-Bold.ttf) format('truetype');
     font-weight: 500;
 }
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DÉFINIR PLUSIEURS POLICES ? */
 
-html
+html, input
 {
     font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
     font-weight: 300;
 }
-/* Peut-être définir plusieurs polices selon l'aspect */
 
-body
+h1, h2, input, #inscription
 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header, #heb_s, #pop_s, #activ_s
-{
-    margin: 2em;
-}
-
-#logo
-{
-    max-height: 2.5em;
-    padding-bottom: 1em;
-}
-
-#inscription
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 2em;
     font-weight: bold;
-    font-size: small;
-    color: #0065FC;
-}
-
-ul
-{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
-
-li
-{
-    font-size: small;
-    padding: 2em;
 }
 
 h1
 {
-    font-weight: bold;
     font-size: large;
 }
 
 h2, input
 {
-    font-weight: bold;
     font-size: medium;
 }
 
-p
+li, p
 {
     font-size: small;
 }
 
-#filters
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-left: 0.5em;
-}
-
-.filter
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 1.5em;
-    padding-right: 1em;
-    border: 2px #F2F2F2 solid;
-    border-radius: 2em;
-}
-
-.icons_f
-{
-    fill: #0065FC;
-    color: #0065FC;
-    width: 1em;
-    height: 1em;
-    padding: 1em;
-    margin-right: 1em;
-    border-radius: 2em;
-    background-color: #DEEBFF;
-}
-
-#research_s
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 100%;
-}
-
-#icon_place
-{
-    background-color: #F2F2F2;
-    fill: #0065FC;
-    color: #0065FC;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-    width: 1em;
-    height: 1em;
-    padding: 1.1em;
-}
-
-#research_form
-{
-    display: flex;      /* No space between type and button */
-}
-
-#research_type
-{
-    border: 1px #F2F2F2 solid;
-    color: black;    /* Changer couleur du texte en noir */
-    padding: 1em;
-}
-
-#research_button
-{
-    border: 0px white solid;
-    background-color: #0065FC;
-    color: white;
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: 1em;
-    padding: 1em;
-}
-
-input
-{
-    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
-}
-
-#icon_info
-{
-    fill: #0065FC;
-    color: #0065FC;
-    width: 0.5em;
-    height: 0.5em;
-    padding: 0.5em;
-    margin-right: 0.5em;
-    border: 0.1em #F2F2F2 solid;
-    border-radius: 2em;
-}
-
-#info
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#heb_s, #pop_s
-{
-    border-radius: 0.75em;
-    background-color: #F2F2F2;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#heb_s .s_title, #pop_s .s_title, .s_remark
-{
-    margin-left: 1em;
-}
-
-.s_title, .s_remark
-{
-    min-width: 100%;
-}
-
-.heb, .pop
-{
-    border: 3px white solid;
-    border-radius: 0.75em;
-    background-color: white;
-    box-shadow: 0.5em 0.5em 1em #F2F2F2;
-    margin: 1em;
-}
-
-.pop
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.heb_img, .pop_img, .act_img
-{
-    max-width: 100%;
-    width: 200px;
-}
-
-.heb_img
-{
-    border-top-left-radius: 0.6em;
-    border-top-right-radius: 0.6em;
-}
-
-.pop_img
-{
-    border-top-left-radius: 0.6em;
-    border-bottom-left-radius: 0.6em;
-}
-
-.heb img+div, .pop img+div, .activ img+div
-{
-    margin: 10px;
-}
-
-.star_y, .star_n
-{
-    width: 1em;
-    height: 1em;
-}
-
-.star_y
-{
-    fill: #0065FC;
-    color: #0065FC;
-}
-
-.star_n
-{
-    fill: #F2F2F2;
-    color: #F2F2F2;
-}
-
-#activ_s
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.activ
-{
-    border: 0px white none;
-    border-radius: 0.75em;
-    background-color: white;
-    box-shadow: 0.5em 0.5em 1em #F2F2F2;
-    margin: 1em;
-}
-
-.act_img
-{
-    border-top-left-radius: 0.75em;
-    border-top-right-radius: 0.75em;
-}
-
-footer
-{
-    background-color: #F2F2F2;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer_el
-{
-    width: 30%;
-    margin: 1em;
-}
-
-.footer_el h2
-{
-    margin-bottom: 1em;
-}
+/* --------------- Links --------------- */
 
 a, a:visited
 {
@@ -304,9 +61,170 @@ a:hover, a.active
     color: #0065FC
 }
 
+/* --------------- Body --------------- */
+
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX METTRE UN PADDING GÉNÉRAL ? */
+}
+
+
+/* ====================================== */
+/* =============== HEADER =============== */
+/* ====================================== */
+
+header
+{
+    width: 100%;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#header_band
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* --------------- Logo and inscription --------------- */
+
+#logo
+{
+    max-height: 2.5em;
+}
+
+#inscription
+{
+    color: #0065FC;
+}
+
 #inscription:hover
 {
     background-color: #DEEBFF;
+}
+
+
+/* =================================== */
+/* =============== NAV =============== */
+/* =================================== */
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX AMÉLIORER POSITIONNEMENT */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CRÉER BANDE BLEUE LORS DE LA SÉLECTION */
+
+ul
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li
+{
+    padding: 2em;
+}
+
+
+/* ====================================================== */
+/* =============== SECTION - PRESENTATION =============== */
+/* ====================================================== */
+
+#presentation
+{
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* --------------- Introduction --------------- */
+
+#introduction
+{
+    margin-bottom: 0.5em;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER L'ESPACEMENT ENTRE LES DEUX PHRASES */
+
+/* --------------- Research --------------- */
+
+#research
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#place_icon
+{
+    background-color: #F2F2F2;
+    width: 1em;
+    height: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding: 1.1em;
+}
+
+#research_form
+{
+    display: flex;      /* No space between type bar and button */
+}
+
+#research_type
+{
+    border: 1px #F2F2F2 solid;
+    padding: 1em;
+}
+
+#research_type::placeholder
+{
+    color: black;
+}
+
+#research_button
+{
+    background-color: #0065FC;
+    color: white;
+    border: 0px white solid;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 1em;
+}
+
+/* --------------- Filters --------------- */
+
+#filters
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LE RETOUR À LA LIGNE SUR TEL */
+}
+
+#filters h2
+{
+    margin-right: 1em;
+}
+
+.filter
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 2px #F2F2F2 solid;
+    border-radius: 2em;
 }
 
 .filter:hover
@@ -314,6 +232,204 @@ a:hover, a.active
     background-color: #F2F2F2;
 }
 
-/* Bleu : #0065FC
-Bleu plus clair : #DEEBFF
-Gris : #F2F2F2*/
+.f_icon
+{
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.7em;
+    padding: 0.8em;
+    border-radius: 2em;
+    background-color: #DEEBFF;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LE PASSAGE DEVANT DE L'ICÔNE */
+}
+
+/* --------------- Information --------------- */
+
+#info
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#info_icon
+{
+    width: 0.6em;
+    height: 0.6em;
+    padding: 0.3em;
+    margin-right: 0.5em;
+    border: 0.1em #F2F2F2 solid;
+    border-radius: 2em;
+}
+
+
+/* ====================================================== */
+/* =============== SECTION - HÉBERGEMENTS =============== */
+/* ====================================================== */
+
+#heb_s
+{
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
+    max-width: 800px;
+    background-color: #F2F2F2;
+    margin: 2em;
+    border-radius: 0.75em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#heb_title
+{
+    min-width: 100%;
+    margin-left: 1em;
+}
+
+.heb
+{
+    background-color: white;
+    margin: 1em;
+    border: 3px white solid;
+    border-radius: 0.75em;
+    box-shadow: 0.5em 0.5em 1em #F2F2F2;
+}
+
+.heb_img
+{
+    width: 300px;
+    max-width: 100%;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+}
+
+#heb_remark
+{
+    min-width: 100%;
+    margin-left: 1em;
+}
+
+.description
+{
+    margin: 10px;
+}
+
+.star_y, .star_n
+{
+    width: 1em;
+    height: 1em;
+}
+
+
+/* ============================================================= */
+/* =============== SECTION - LES PLUS POPULAIRES =============== */
+/* ============================================================= */
+
+#pop_s
+{
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
+    max-width: 400px;
+    background-color: #F2F2F2;
+    margin: 2em;
+    border-radius: 0.75em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pop_title
+{
+    min-width: 100%;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#pop_icon
+{
+    width: 1em;
+    height: 1em;
+    margin: 1em;
+    margin-right: 2em;
+}
+
+.pop
+{
+    background-color: white;
+    margin: 1em;
+    border: 3px white solid;
+    border-radius: 0.75em;
+    box-shadow: 0.5em 0.5em 1em #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pop_img
+{
+    max-width: 40%;
+    border-top-left-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+}
+
+
+/* =================================================== */
+/* =============== SECTION - ACTIVITÉS =============== */
+/* =================================================== */
+
+#activ_s
+{
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#activ_title
+{
+    min-width: 100%;
+}
+
+.activ
+{
+    background-color: white;
+    margin: 1em;
+    border: 0px white none;
+    border-radius: 0.75em;
+    box-shadow: 0.5em 0.5em 1em #F2F2F2;
+    display: flex;
+    flex-direction: COLUMN;
+    flex-wrap: wrap;
+}
+
+.act_img
+{
+    width: 300px;
+    max-width: 100%;
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+}
+
+
+/* ====================================== */
+/* =============== FOOTER =============== */
+/* ====================================== */
+
+footer
+{
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_el
+{
+    width: 30%;
+    margin: 2em;
+}
+
+.footer_el h2
+{
+    margin-bottom: 1.2em;
+}
