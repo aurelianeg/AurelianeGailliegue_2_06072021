@@ -58,16 +58,17 @@ a, a:visited
 
 a:hover, a.active
 {
-    color: #0065FC
+    color: #0065FC;
 }
 
 /* --------------- Body --------------- */
 
 body
 {
+    width: 100%;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER TAILLE MAXIMALE CENTRÉE SI ÉCRAN TROP GRAND */
     display: flex;
     flex-wrap: wrap;
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX METTRE UN PADDING GÉNÉRAL ? */
 }
 
 
@@ -78,9 +79,7 @@ body
 header
 {
     width: 100%;
-    margin-top: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
+    padding-right: 1em;
 }
 
 #header_band
@@ -95,11 +94,16 @@ header
 #logo
 {
     max-height: 2.5em;
+    padding-top: 2em;
+    padding-left: 2em;
 }
 
 #inscription
 {
     color: #0065FC;
+    padding: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 #inscription:hover
@@ -112,8 +116,15 @@ header
 /* =============== NAV =============== */
 /* =================================== */
 
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX AMÉLIORER POSITIONNEMENT */
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CRÉER BANDE BLEUE LORS DE LA SÉLECTION */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX LAISSER BANDE BLEUE ET SÉLECTION */
+
+nav
+{
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX POSITIONNEMENT EN ABSOLUTE */
+    position: absolute;
+    top: 2em;
+    right: 10em;
+}
 
 ul
 {
@@ -122,9 +133,16 @@ ul
     flex-direction: row;
 }
 
-li
+.nav_el
 {
-    padding: 2em;
+    padding-top: 3em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+.nav_el:hover, .nav_el:active
+{
+    border-top: 2px #0065FC solid;
 }
 
 
@@ -134,7 +152,6 @@ li
 
 #presentation
 {
-    margin-top: 1em;
     margin-left: 2em;
     margin-right: 2em;
     display: flex;
@@ -165,7 +182,7 @@ li
     height: 1em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
-    padding: 1.1em;
+    padding: 1.2em;
 }
 
 #research_form
@@ -264,15 +281,23 @@ li
 
 
 /* ====================================================== */
-/* =============== SECTION - HÉBERGEMENTS =============== */
+/* =============== SECTION - HEBERGEMENTS =============== */
 /* ====================================================== */
 
-#heb_s
+#heb_pop
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding: 2em;
+}
+
+#heb_d
 {
     /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
-    max-width: 800px;
+    max-width: 60%;
     background-color: #F2F2F2;
-    margin: 2em;
     border-radius: 0.75em;
     padding: 1em;
     display: flex;
@@ -287,9 +312,10 @@ li
 
 .heb
 {
+    width: 28%;
     background-color: white;
     margin: 1em;
-    border: 3px white solid;
+    border: 4px white solid;
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
 }
@@ -311,6 +337,13 @@ li
 .description
 {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.description h2
+{
+    margin: 0em;
 }
 
 .star_y, .star_n
@@ -324,12 +357,10 @@ li
 /* =============== SECTION - LES PLUS POPULAIRES =============== */
 /* ============================================================= */
 
-#pop_s
+#pop_d
 {
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
-    max-width: 400px;
+    width: 30%;
     background-color: #F2F2F2;
-    margin: 2em;
     border-radius: 0.75em;
     padding: 1em;
     display: flex;
@@ -357,24 +388,28 @@ li
 {
     background-color: white;
     margin: 1em;
-    border: 3px white solid;
+    border: 4px white solid;
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .pop_img
 {
-    max-width: 40%;
+    max-width: 45%;
     border-top-left-radius: 0.6em;
     border-bottom-left-radius: 0.6em;
 }
 
+.pop .stars
+{
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER L'ALIGNEMENT EN BAS DU BLOC */
+}
+
 
 /* =================================================== */
-/* =============== SECTION - ACTIVITÉS =============== */
+/* =============== SECTION - ACTIVITES =============== */
 /* =================================================== */
 
 #activ_s
@@ -398,7 +433,7 @@ li
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
     display: flex;
-    flex-direction: COLUMN;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -420,12 +455,15 @@ footer
     width: 100%;
     background-color: #F2F2F2;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer_el
 {
-    width: 30%;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LE RETOUR À LA LIGNE */
+    width: 25%;
     margin: 2em;
 }
 
