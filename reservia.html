@@ -9,24 +9,24 @@
 
     <body>
 
-        <header>
-            <div id="header_band">
+        <div id="top_band">
+
+            <header>
                 <a href="#">
                     <img id="logo" src="images/logo/Reservia@3x.png" alt="Reservia" />
                 </a>
-                <a href="#">
-                    <p id="inscription">S'inscrire</p>
-                </a>
-            </div>
-        </header>
+            </header>
 
 
-        <nav>
-            <ul>
-                <li><a class="nav_el" href="#heb_s">Hébergements</a></li>
-                <li><a class="nav_el" href="#activ_s">Activités</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a class="nav_el" href="#heb_s">Hébergements</a></li>
+                    <li><a class="nav_el" href="#activ_s">Activités</a></li>
+                    <li><a id="inscription" href="#">S'inscrire</a></li>
+                </ul>
+            </nav>
+
+        </div>
         
 
         <section id="presentation">
@@ -38,7 +38,7 @@
 
             <div id="research">
                 <img id="place_icon" src="icons/map-marker-alt-solid-black.svg" alt="Lieu" />
-                <form id="research_form" method="post" action="#">
+                <form id="research_form" method="post" action="">
                 <!-- Gérer renvoi page -->
                     <input id="research_type" type="search" name="Barre de recherche" placeholder="Marseille, France" />
                     <input id="research_button" type="submit" value="Rechercher" />

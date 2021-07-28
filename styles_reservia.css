@@ -65,10 +65,8 @@ a:hover, a.active
 
 body
 {
-    width: 100%;
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER TAILLE MAXIMALE CENTRÉE SI ÉCRAN TROP GRAND */
-    display: flex;
-    flex-wrap: wrap;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 
@@ -76,39 +74,23 @@ body
 /* =============== HEADER =============== */
 /* ====================================== */
 
-header
+#top_band
 {
-    width: 100%;
-    padding-right: 1em;
-}
-
-#header_band
-{
+    margin: 50px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-/* --------------- Logo and inscription --------------- */
+/* --------------- Logo --------------- */
 
 #logo
 {
     max-height: 2.5em;
-    padding-top: 2em;
-    padding-left: 2em;
-}
-
-#inscription
-{
-    color: #0065FC;
-    padding: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
-#inscription:hover
-{
-    background-color: #DEEBFF;
 }
 
 
@@ -118,31 +100,33 @@ header
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX LAISSER BANDE BLEUE ET SÉLECTION */
 
-nav
-{
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX POSITIONNEMENT EN ABSOLUTE */
-    position: absolute;
-    top: 2em;
-    right: 10em;
-}
-
 ul
 {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    padding-inline-start: 0;
 }
 
 .nav_el
 {
-    padding-top: 3em;
-    padding-left: 2.5em;
-    padding-right: 2.5em;
+    padding: 2em;
 }
 
 .nav_el:hover, .nav_el:active
 {
     border-top: 2px #0065FC solid;
+}
+
+#inscription
+{
+    padding: 2em;
+    color: #0065FC;
+}
+
+#inscription:hover
+{
+    background-color: #DEEBFF;
 }
 
 
@@ -152,8 +136,9 @@ ul
 
 #presentation
 {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -163,9 +148,20 @@ ul
 
 #introduction
 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER L'ESPACEMENT ENTRE LES DEUX PHRASES */
+
+#introduction h1
+{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#introduction p
+{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
 
 /* --------------- Research --------------- */
 
@@ -194,6 +190,7 @@ ul
 {
     border: 1px #F2F2F2 solid;
     padding: 1em;
+    padding-right: 2em;
 }
 
 #research_type::placeholder
@@ -251,8 +248,8 @@ ul
 
 .f_icon
 {
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.3em;
+    height: 1.3em;
     margin-right: 0.7em;
     padding: 0.8em;
     border-radius: 2em;
@@ -290,31 +287,34 @@ ul
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
-    padding: 2em;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 #heb_d
 {
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
-    max-width: 60%;
+    width: 835px;
     background-color: #F2F2F2;
     border-radius: 0.75em;
-    padding: 1em;
+    margin: 20px;
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 #heb_title
 {
     min-width: 100%;
-    margin-left: 1em;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .heb
 {
-    width: 28%;
+    width: 240px;
     background-color: white;
-    margin: 1em;
+    margin: 15px;
     border: 4px white solid;
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
@@ -322,16 +322,17 @@ ul
 
 .heb_img
 {
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DES IMAGES */
 }
 
 #heb_remark
 {
-    min-width: 100%;
-    margin-left: 1em;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .description
@@ -343,13 +344,20 @@ ul
 
 .description h2
 {
-    margin: 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.description p
+{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
 }
 
 .star_y, .star_n
 {
-    width: 1em;
-    height: 1em;
+    width: 15px;
+    height: 15px;
 }
 
 
@@ -359,10 +367,11 @@ ul
 
 #pop_d
 {
-    width: 30%;
+    width: 375px;
     background-color: #F2F2F2;
     border-radius: 0.75em;
-    padding: 1em;
+    margin: 20px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -370,7 +379,8 @@ ul
 #pop_title
 {
     min-width: 100%;
-    margin-left: 1em;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -387,7 +397,7 @@ ul
 .pop
 {
     background-color: white;
-    margin: 1em;
+    margin: 15px;
     border: 4px white solid;
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
@@ -415,7 +425,10 @@ ul
 #activ_s
 {
     /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA DISPOSITION */
-    margin: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -423,12 +436,16 @@ ul
 #activ_title
 {
     min-width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .activ
 {
     background-color: white;
-    margin: 1em;
+    margin: 20px;
     border: 0px white none;
     border-radius: 0.75em;
     box-shadow: 0.5em 0.5em 1em #F2F2F2;
@@ -452,7 +469,10 @@ ul
 
 footer
 {
-    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
@@ -463,11 +483,11 @@ footer
 .footer_el
 {
     /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LE RETOUR À LA LIGNE */
-    width: 25%;
-    margin: 2em;
+    width: 30%;
 }
 
 .footer_el h2
 {
-    margin-bottom: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
