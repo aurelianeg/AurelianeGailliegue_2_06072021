@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
     <head>
         <meta charset="utf-8" />
@@ -38,31 +38,32 @@
 
             <div id="research">
                 <img id="place_icon" src="icons/map-marker-alt-solid-black.svg" alt="Lieu" />
-                <form id="research_form" method="post" action="">
-                <!-- Gérer renvoi page -->
+                <form id="research_form" method="post" action="#">
                     <input id="research_type" type="search" name="Barre de recherche" placeholder="Marseille, France" />
                     <input id="research_button" type="submit" value="Rechercher" />
                 </form>
             </div>
 
             <div id="filters">
-                <h2>Filtres</h2>
-                <a class="filter" href="#">
-                    <img class="f_icon" src="icons/money-bill-wave-solid-blue.svg" alt="Économique" />
-                    <h2>Économique</h2>
-                </a>
-                <a class="filter" href="#">
-                    <img class="f_icon" src="icons/child-solid-blue.svg" alt="Familial" />
-                    <h2>Familial</h2>
-                </a>
-                <a class="filter" href="#">
-                    <img class="f_icon" src="icons/heart-solid-blue.svg" alt="Romantique" />
-                    <h2>Romantique</h2>
-                </a>
-                <a class="filter" href="#">
-                    <img class="f_icon" src="icons/dog-solid-blue.svg" alt="Animaux autorisés" />
-                    <h2>Animaux autorisés</h2>
-                </a>
+                <h2 id="filters_title">Filtres</h2>
+                <div id="filters_div">
+                    <a class="filter" href="#">
+                        <img class="f_icon" src="icons/money-bill-wave-solid-blue.svg" alt="Économique" />
+                        <h2 class="filters_name">Économique</h2>
+                    </a>
+                    <a class="filter" href="#">
+                        <img class="f_icon" src="icons/child-solid-blue.svg" alt="Familial" />
+                        <h2 class="filters_name">Familial</h2>
+                    </a>
+                    <a class="filter" href="#">
+                        <img class="f_icon" src="icons/heart-solid-blue.svg" alt="Romantique" />
+                        <h2 class="filters_name">Romantique</h2>
+                    </a>
+                    <a class="filter" href="#">
+                        <img class="f_icon" src="icons/dog-solid-blue.svg" alt="Animaux autorisés" />
+                        <h2 class="filters_name">Animaux autorisés</h2>
+                    </a>
+                </div>
             </div>
 
             <div id="info">
@@ -241,37 +242,50 @@
 
             <h1 id="activ_title">Activités à Marseille</h1>
 
-            <div id="activ_grid">
-                <a class="activ" id="activ_port" href="#">
-                    <img class="act_img" src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
-                    <h2 class="description">Vieux Port</h2>
-                </a>
+            <ul id="activ_grid">
 
-                <a class="activ" id="activ_fort" href="#">
-                    <img class="act_img" src="images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
-                    <h2 class="description">Fort de Pomègues</h2>
-                </a>
+                <li class="activ">
+                    <a id="activ_port" href="#">
+                        <img class="act_img" src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
+                        <h2 class="description">Vieux Port</h2>
+                    </a>
+                </li>
+                <div id="activ_fortiles">
+                    <li class="activ">
+                        <a id="activ_fort" href="#">
+                            <img class="act_img" src="images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
+                            <h2 class="description">Fort de Pomègues</h2>
+                        </a>
+                    </li>
+                    <li class="activ">
+                        <a id="activ_iles" href="#">
+                            <img class="act_img" src="images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
+                            <h2 class="description">Îles du Frioul</h2>
+                        </a>
+                    </li>
+                </div>
+                <li class="activ">
+                    <a id="activ_parcnat" href="#">
+                        <img class="act_img" src="images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
+                        <h2 class="description">Parc National des Calanques</h2>
+                    </a>
+                </li>
+                <div id="activ_notredameparc">
+                    <li class="activ">
+                        <a id="activ_notredame" href="#">
+                            <img class="act_img" src="images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
+                            <h2 class="description">Notre-Dame-de-la-Garde</h2>
+                        </a>
+                    </li>
+                    <li class="activ">
+                        <a id="activ_parc" href="#">
+                            <img class="act_img" src="images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
+                            <h2 class="description">Parc Longchamp</h2>
+                        </a>
+                    </li>
+                </div>
 
-                <a class="activ" id="activ_iles" href="#">
-                    <img class="act_img" src="images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
-                    <h2 class="description">Îles du Frioul</h2>
-                </a>
-
-                <a class="activ" id="activ_parcnat" href="#">
-                    <img class="act_img" src="images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
-                    <h2 class="description">Parc National des Calanques</h2>
-                </a>
-
-                <a class="activ" id="activ_notredame" href="#">
-                    <img class="act_img" src="images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
-                    <h2 class="description">Notre-Dame-de-la-Garde</h2>
-                </a>
-
-                <a class="activ" id="activ_parc" href="#">
-                    <img class="act_img" src="images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
-                    <h2 class="description">Parc Longchamp</h2>
-                </a>
-            </div>
+            </ul>
 
         </section>
 
