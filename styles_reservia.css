@@ -499,19 +499,6 @@ ul
     margin-right: 20px;
 }
 
-#activ_grid
-{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;/*repeat(auto-fill, minmax(320px, 1fr));*/
-    grid-template-rows: repeat(4, minmax(200px, auto));
-    grid-gap: 10px;
-    grid-template-areas: "port"
-                         "fortiles"
-                         "parcnat"
-                         "notredameparc"
-}
-
 #activ_port
 {
     grid-area: port;
@@ -527,19 +514,8 @@ ul
     grid-area: iles;
 }
 
-#activ_fortiles
-{
-    grid-area: fortiles;
-    display: grid;
-    grid-template-rows: repeat(2, minmax(200px, auto));
-    grid-gap: 10px;
-    grid-template-areas: "fort"
-                         "iles";
-}
-
 #activ_parcnat
 {
-    grid-row: 1 / 3;
     grid-area: parcnat;
 }
 
@@ -553,6 +529,16 @@ ul
     grid-area: parc;
 }
 
+#activ_fortiles
+{
+    grid-area: fortiles;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-gap: 10px;
+    grid-template-areas: "fort"
+                         "iles";
+}
+
 #activ_notredameparc
 {
     grid-area: notredameparc;
@@ -563,36 +549,66 @@ ul
                          "parc";
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1440px)
+#activ_block1
 {
-    #activ_grid
-    {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        grid-template-rows: repeat(2, minmax(150px, 500px));
-        grid-template-areas: "port fortiles"
-                             "parcnat notredameparc";
-    }
+    grid-area: block1;
+    display: grid;
+    grid-template-columns: 1fr;/*repeat(auto-fill, minmax(320px, 1fr));*/
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-gap: 10px;
+    grid-template-areas: "port"
+                         "fortiles";
+}
 
-    #activ_fortiles
+#activ_block2
+{
+    grid-area: block2;
+    display: grid;
+    grid-template-columns: 1fr;/*repeat(auto-fill, minmax(320px, 1fr));*/
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-gap: 10px;
+    grid-template-areas: "parcnat"
+                         "notredameparc";
+}
+
+#activ_grid
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;/*repeat(auto-fill, minmax(320px, 1fr));*/
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-gap: 10px;
+    grid-template-areas: "block1"
+                         "block2";
+}
+
+@media only screen and (min-width: 768px)
+{
+    #activ_block1
     {
         width: 100%;
+        grid-template-columns: repeat(2, auto);/*repeat(4, 1fr);*/
+        grid-template-rows: repeat(1, 500px);
+        grid-template-areas: "port fortiles";
     }
 
-    #activ_notredameparc
+    #activ_block2
     {
         width: 100%;
+        grid-template-columns: repeat(2, auto);/*repeat(4, 1fr);*/
+        grid-template-rows: repeat(1, 500px);
+        grid-template-areas: "parcnat notredameparc";
     }
-
 }
 
 @media only screen and (min-width: 1440px)
 {
     #activ_grid
     {
-        height: 500px;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));/*repeat(4, 1fr);*/
-        grid-template-rows: repeat(1, minmax(240px, auto));
-        grid-template-areas: "port fortiles parcnat notredameparc";
+        grid-template-columns: repeat(2, auto);/*repeat(4, 1fr);*/
+        grid-template-rows: repeat(1, 500px);
+        grid-gap: 10px;
+        grid-template-areas: "block1 block2";
     }
 }
 
