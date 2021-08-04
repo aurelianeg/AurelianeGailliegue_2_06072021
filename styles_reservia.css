@@ -11,7 +11,7 @@ Grey: #F2F2F2*/
 {
     font-family: "Raleway";
     src: url(fonts/Raleway-Light.ttf) format('truetype');
-    font-weight: 300;
+    font-weight: 400;
 }
 
 @font-face
@@ -20,12 +20,11 @@ Grey: #F2F2F2*/
     src: url(fonts/Raleway-Bold.ttf) format('truetype');
     font-weight: 500;
 }
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DÉFINIR PLUSIEURS POLICES ? */
 
 html, input
 {
     font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h1, h2, input, #inscription
@@ -35,7 +34,7 @@ h1, h2, input, #inscription
 
 h1
 {
-    font-size: large;
+    font-size: x-large;
 }
 
 h2, input
@@ -46,6 +45,16 @@ h2, input
 li, p
 {
     font-size: small;
+}
+
+#presentation h2, #research_type, #research_button, #heb_remark, footer h2
+{
+    font-size: large;
+}
+
+nav li, #presentation p, footer p
+{
+    font-size: medium;
 }
 
 /* --------------- Links --------------- */
@@ -70,8 +79,6 @@ body
     margin: 0 auto;
 }
 
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LE RESPONSIVE */
-
 
 /* ====================================== */
 /* =============== HEADER =============== */
@@ -81,9 +88,8 @@ body
 {
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 25px;
-    margin-top: 5px;    /**/
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -94,8 +100,9 @@ body
 
 #logo
 {
-    max-height: 2.5em;
+    height: 50px;
     padding-top: 40px;
+    padding-bottom: 35px;
 }
 
 
@@ -116,8 +123,8 @@ ul
 .nav_el
 {
     padding: 30px;
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX METTRE BANDE BLEUE TOUT EN HAUT */
-    padding-top: 65px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .nav_el:hover, .nav_el:active
@@ -128,6 +135,8 @@ ul
 #inscription
 {
     padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: #0065FC;
 }
 
@@ -436,6 +445,12 @@ ul
     width: 100%;
     margin-left: 15px;
     margin-right: 15px;
+    padding: 10px;
+}
+
+#heb_remark:hover
+{
+    color: #0065FC;
 }
 
 .description
@@ -759,8 +774,8 @@ footer
 
 .footer_el
 {
-    min-width: 300px;
-    max-width: 350px;
+    min-width: 400px;
+    max-width: 450px;
 }
 
 .footer_el h2
