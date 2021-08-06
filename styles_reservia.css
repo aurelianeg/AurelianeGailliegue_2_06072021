@@ -36,10 +36,10 @@ h1, h2, input, #inscription, strong
 
 h1
 {
-    font-size: large; /* XXXXXXXXXXXXXXXXXXXXX SIZE BETWEEN X-LARGE AND LARGE */
+    font-size: 22px; /* XXXXXXXXXXXXXXXXXXXXX SIZE BETWEEN X-LARGE AND LARGE */
 }
 
-h2, input
+h2
 {
     font-size: medium;
 }
@@ -49,7 +49,20 @@ li, p
     font-size: small;
 }
 
-#presentation h2, #research_type, #research_button, #heb_remark, footer h2
+h2, .filters_name
+{
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .filters_name
+    {
+        font-size: 15px;
+    }
+}
+
+input, #heb_remark, footer h2
 {
     font-size: large;
 }
@@ -405,6 +418,15 @@ nav a
     align-items: center;
 }
 
+@media only screen and (max-width: 767px)
+{
+    .filters_name
+    {
+        margin-right: 10px;
+        padding-right: 15px;
+    }
+}
+
 .filters_name:hover
 {
     background-color: #F2F2F2;
@@ -473,6 +495,9 @@ nav a
         margin: 0px;
         margin-left: 0px;
         margin-right: 0px;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -567,10 +592,20 @@ nav a
     overflow: hidden;
 }
 
+@media only screen and (max-width: 767px)
+{
+    .heb
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
 .heb_img
 {
     width: 100%;
-    height: calc(100% - 82px);
+    height: 60%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit: cover;
@@ -590,8 +625,9 @@ nav a
     color: #0065FC;
 }
 
-.description
+.heb .description
 {
+    height: 40%;
     margin-top: 10px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -649,6 +685,9 @@ nav a
         margin: 10px;
         margin-left: 0px;
         margin-right: 0px;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -698,6 +737,15 @@ nav a
     overflow: hidden;
 }
 
+@media only screen and (max-width: 767px)
+{
+    .pop
+    {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
 @media only screen and (min-width: 1100px) and (max-width: 1439px)
 {
     #pop_block
@@ -719,17 +767,18 @@ nav a
     object-fit: cover;
     /*flex: 0 1 auto;*/
 }
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DE LA DERNIÈRE IMAGE SUR CHROME */
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DE LA DEUXIÈME IMAGE SUR FIREFOX */
-
-
 
 .pop .description
 {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    box-sizing: border-box;
+    width: 60%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -752,9 +801,8 @@ nav a
 {
     #activ_s
     {
-        margin: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -765,6 +813,15 @@ nav a
     margin-bottom: 0px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #activ_title
+    {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 #activ1
@@ -906,6 +963,7 @@ nav a
     .activ
     {
         height: 200px;
+        margin: 10px;
     }
 }
 
@@ -942,6 +1000,14 @@ footer
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px)
+{
+    footer
+    {
+        padding: 35px;
+    }
 }
 
 .footer_el
