@@ -36,7 +36,7 @@ h1, h2, input, #inscription, strong
 
 h1
 {
-    font-size: 22px; /* XXXXXXXXXXXXXXXXXXXXX SIZE BETWEEN X-LARGE AND LARGE */
+    font-size: 22px;
 }
 
 h2
@@ -94,8 +94,6 @@ body
     margin: 0 auto;
 }
 
-/* XXXXXXXXXXXXXXXXXXXXX RESPONSIVE WINDOW NOT WORKING */
-
 
 /* ====================================== */
 /* =============== HEADER =============== */
@@ -103,10 +101,6 @@ body
 
 #top_band
 {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -114,22 +108,27 @@ body
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 767px)
-{
-    #top_band
-    {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
 /* --------------- Logo --------------- */
 
 #logo
 {
     height: 50px;
+    margin-left: 50px;
     padding-top: 40px;
     padding-bottom: 35px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #logo
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 
@@ -137,9 +136,8 @@ body
 /* =============== NAV =============== */
 /* =================================== */
 
-ul
+nav
 {
-    list-style-type: none;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -163,13 +161,14 @@ nav a
 
 .nav_el:hover, .nav_el:active
 {
-    border-top: 2px #0065FC solid;
+    border-top: 3px #0065FC solid;
 }
 
 @media only screen and (max-width: 767px)
 {
-    ul
+    nav
     {
+        width: 100%;
         flex-direction: column-reverse;
         /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX RESPONSIVE NOT WORKING */
     }
@@ -185,16 +184,39 @@ nav a
         padding: 15px;
     }
 
+    .nav_el
+    {
+        border-top: 0px;
+        border-bottom: 4px #F2F2F2 solid;
+        margin-bottom: 30px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
     .nav_el:hover, .nav_el:active
     {
         border-top: 0px;
-        border-bottom: 5px #0065FC solid;
+        border-bottom: 4px #0065FC solid;
     }
 }
 
 #inscription
 {
+    margin-right: 50px;
     color: #0065FC;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #inscription
+    {
+        margin-top: 3px;
+        margin-right: 0px;
+        padding: 30px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
 }
 
 #inscription:hover
@@ -436,9 +458,11 @@ nav a
 
 #info
 {
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #info_icon
@@ -449,6 +473,12 @@ nav a
     margin-right: 10px;
     border: 1px #F2F2F2 solid;
     border-radius: 40px;
+}
+
+#info p
+{
+    margin-block-start: 1px;
+    margin-block-end: 1px;
 }
 
 
@@ -839,6 +869,21 @@ nav a
     grid-area: activ3;
 }
 
+@media only screen and (min-width: 768px)
+{
+    #activ2
+    {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #activ3
+    {
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+}
+
 #activ4
 {
     grid-area: activ4;
@@ -858,10 +903,18 @@ nav a
 {
     grid-area: activ2and3;
     display: grid;
-    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 10px;
     grid-template-areas: "activ2"
                          "activ3";
+}
+
+@media only screen and (max-width: 767px)
+{
+    #activ2and3
+    {
+        grid-template-rows: repeat(2, minmax(200px, auto));
+    }
 }
 
 #activ5and6
@@ -900,24 +953,16 @@ nav a
 {
     #activ_block1
     {
-        width: 100%;
-        grid-area: block1;
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, minmax(200px, auto));
-        grid-gap: 10px;
         grid-template-areas: "activ1"
                              "activ2and3";
     }
     
     #activ_block2
     {
-        width: 100%;
-        grid-area: block2;
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, minmax(200px, auto));
-        grid-gap: 10px;
         grid-template-areas: "activ4"
                              "activ5and6";
     }
@@ -937,11 +982,8 @@ nav a
 {
     #activ_grid
     {
-        width: 100%;
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, minmax(200px, auto));
-        grid-gap: 10px;
         grid-template-areas: "block1"
                              "block2";
     }
