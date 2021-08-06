@@ -3,6 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles_reservia.css" />
         <title>Reservia - Vacances de rêve</title>
     </head>
@@ -20,8 +21,10 @@
 
             <nav>
                 <ul>
-                    <li><a class="nav_el" href="#heb_s">Hébergements</a></li>
-                    <li><a class="nav_el" href="#activ_s">Activités</a></li>
+                    <div id="nav_elements">
+                        <li><a class="nav_el" href="#heb_s">Hébergements</a></li>
+                        <li><a class="nav_el" href="#activ_s">Activités</a></li>
+                    </div>
                     <li><a id="inscription" href="#">S'inscrire</a></li>
                 </ul>
             </nav>
@@ -42,6 +45,7 @@
                     <input id="research_type" type="search" name="Barre de recherche" placeholder="Marseille, France" />
                     <input id="research_button" type="submit" value="Rechercher" />
                 </form>
+                <img id="research_icon" src="icons/search-solid-white.svg" alt="Lieu" />
             </div>
 
             <div id="filters">

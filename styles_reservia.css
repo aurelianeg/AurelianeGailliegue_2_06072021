@@ -3,7 +3,9 @@
 
 /* Blue: #0065FC
 Lighter blue: #DEEBFF
-Grey: #F2F2F2*/
+Grey: #F2F2F2
+Darker grey: #E3E3E3
+Dark grey: #D9D9D9 */
 
 /* --------------- Fonts --------------- */
 
@@ -27,14 +29,14 @@ html, input
     font-weight: 400;
 }
 
-h1, h2, input, #inscription
+h1, h2, input, #inscription, strong
 {
-    font-weight: bold;
+    font-weight: 500; /* bold */
 }
 
 h1
 {
-    font-size: x-large;
+    font-size: large; /* XXXXXXXXXXXXXXXXXXXXX SIZE BETWEEN X-LARGE AND LARGE */
 }
 
 h2, input
@@ -79,6 +81,8 @@ body
     margin: 0 auto;
 }
 
+/* XXXXXXXXXXXXXXXXXXXXX RESPONSIVE WINDOW NOT WORKING */
+
 
 /* ====================================== */
 /* =============== HEADER =============== */
@@ -94,6 +98,16 @@ body
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #top_band
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 /* --------------- Logo --------------- */
@@ -115,16 +129,23 @@ ul
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
     margin-block-start: 0px;
     margin-block-end: 0px;
     padding-inline-start: 0px;
 }
 
-.nav_el
+#nav_elements
 {
-    padding: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav a
+{
+    padding: 35px;
+    padding-top: 53px;
+    padding-bottom: 53px;
 }
 
 .nav_el:hover, .nav_el:active
@@ -132,11 +153,34 @@ ul
     border-top: 2px #0065FC solid;
 }
 
+@media only screen and (max-width: 767px)
+{
+    ul
+    {
+        flex-direction: column-reverse;
+        /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX RESPONSIVE NOT WORKING */
+    }
+
+    #nav_elements
+    {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav a
+    {
+        padding: 15px;
+    }
+
+    .nav_el:hover, .nav_el:active
+    {
+        border-top: 0px;
+        border-bottom: 5px #0065FC solid;
+    }
+}
+
 #inscription
 {
-    padding: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
     color: #0065FC;
 }
 
@@ -158,6 +202,15 @@ ul
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #presentation
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 /* --------------- Introduction --------------- */
@@ -188,6 +241,16 @@ ul
     flex-direction: row;
 }
 
+@media only screen and (max-width: 767px)
+{
+    #research
+    {
+        margin-top: 20px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
 #place_icon
 {
     background-color: #F2F2F2;
@@ -205,14 +268,29 @@ ul
 
 #research_type
 {
+    height: 50px;
     border: 1px #F2F2F2 solid;
     padding-left: 15px;
     padding-right: 20px;
 }
 
+@media only screen and (max-width: 767px)
+{
+    #research_form
+    {
+        width: 100%;
+    }
+
+    #research_type
+    {
+        width: calc(100% - 20px);
+    }
+}
+
 #research_type::placeholder
 {
     color: black;
+    opacity: 1;
 }
 
 #research_button
@@ -222,6 +300,7 @@ ul
     border: 0px white solid;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    height: 50px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -231,6 +310,40 @@ ul
     background-color: #DEEBFF;
     color: #0065FC;
 }
+
+@media only screen and (max-width: 767px)
+{
+    #research_button
+    {
+        display: none;
+    }
+}
+
+#research_icon
+{
+    background-color: #0065FC;
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    padding: 17px;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+}
+
+#research_icon:active
+{
+    background-color: #DEEBFF;
+}
+
+@media only screen and (min-width: 768px)
+{
+    #research_icon
+    {
+        display: none;
+    }
+}
+
 
 /* --------------- Filters --------------- */
 
@@ -270,8 +383,8 @@ ul
 {
     background-color: #DEEBFF;
     border-radius: 40px;
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
     padding: 15px;
     position: absolute;
     z-index: 1;
@@ -280,7 +393,7 @@ ul
 
 .filters_name
 {
-    border: 2px #F2F2F2 solid;
+    border: 2px #D9D9D9 solid;
     border-radius: 40px;
     height: 47px;
     margin-top: 6px;
@@ -331,6 +444,15 @@ ul
     margin-right: 30px;
 }
 
+@media only screen and (max-width: 767px)
+{
+    #heb_pop
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
 #heb_d
 {
     width: 100%;
@@ -341,6 +463,17 @@ ul
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #heb_d
+    {
+        background-color: white;
+        margin: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 @media only screen and (min-width: 1440px)
@@ -396,25 +529,28 @@ ul
 {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, minmax(200px, auto));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, auto));
     grid-gap: 0px;
-    grid-template-areas: "heb1"
-                         "heb2"
-                         "heb3"
-                         "heb4"
-                         "heb5"
-                         "heb6";
+    grid-template-areas: "heb1 heb2 heb3"
+                         "heb4 heb5 heb6";
 }
 
-@media only screen and (min-width: 1100px)
+@media only screen and (max-width: 1023px)
 {
     #heb_block
     {
-        grid-template-columns: repeat(3, minmax(0, 1fr));/*repeat(4, 1fr);*/
-        grid-template-rows: repeat(2, minmax(200px, auto));
-        grid-template-areas: "heb1 heb2 heb3"
-                             "heb4 heb5 heb6";
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, minmax(200px, auto));
+        grid-gap: 0px;
+        grid-template-areas: "heb1"
+                             "heb2"
+                             "heb3"
+                             "heb4"
+                             "heb5"
+                             "heb6";
     }
 }
 
@@ -425,9 +561,10 @@ ul
     margin: 15px;
     border: 5px white solid;
     border-radius: 20px;
-    box-shadow: 3px 3px 10px 5px #E2E2E2;
+    box-shadow: 3px 3px 10px 5px #E3E3E3;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .heb_img
@@ -504,6 +641,17 @@ ul
     flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 767px)
+{
+    #pop_d
+    {
+        border-radius: 0px;
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
 @media only screen and (min-width: 1440px)
 {
     #pop_d
@@ -544,9 +692,10 @@ ul
     margin: 15px;
     border: 5px white solid;
     border-radius: 20px;
-    box-shadow: 3px 3px 10px 5px #E2E2E2;
+    box-shadow: 3px 3px 10px 5px #E3E3E3;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 1100px) and (max-width: 1439px)
@@ -569,8 +718,11 @@ ul
     border-bottom-left-radius: 15px;
     object-fit: cover;
     /*flex: 0 1 auto;*/
-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DE LA DERNIÈRE IMAGE */
 }
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DE LA DERNIÈRE IMAGE SUR CHROME */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXX GÉRER LA TAILLE DE LA DEUXIÈME IMAGE SUR FIREFOX */
+
+
 
 .pop .description
 {
@@ -594,6 +746,16 @@ ul
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #activ_s
+    {
+        margin: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 #activ_title
@@ -657,42 +819,50 @@ ul
 
 #activ_block1
 {
+    width: 100%;
     grid-area: block1;
     display: grid;
-    grid-template-columns: 1fr;/*repeat(auto-fill, minmax(320px, 1fr));*/
-    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, 500px);
     grid-gap: 10px;
-    grid-template-areas: "activ1"
-                         "activ2and3";
+    grid-template-areas: "activ1 activ2and3";
 }
 
 #activ_block2
 {
+    width: 100%;
     grid-area: block2;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, 500px);
     grid-gap: 10px;
-    grid-template-areas: "activ4"
-                         "activ5and6";
+    grid-template-areas: "activ4 activ5and6";
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (max-width: 767px)
 {
     #activ_block1
     {
         width: 100%;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(1, 500px);
-        grid-template-areas: "activ1 activ2and3";
+        grid-area: block1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, minmax(200px, auto));
+        grid-gap: 10px;
+        grid-template-areas: "activ1"
+                             "activ2and3";
     }
-
+    
     #activ_block2
     {
         width: 100%;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(1, 500px);
-        grid-template-areas: "activ4 activ5and6";
+        grid-area: block2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, minmax(200px, auto));
+        grid-gap: 10px;
+        grid-template-areas: "activ4"
+                             "activ5and6";
     }
 }
 
@@ -700,27 +870,29 @@ ul
 {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, minmax(200px, auto));
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, 500px);
     grid-gap: 10px;
-    grid-template-areas: "block1"
-                         "block2";
+    grid-template-areas: "block1 block2";
 }
 
-@media only screen and (min-width: 1440px)
+@media only screen and (max-width: 1439px)
 {
     #activ_grid
     {
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(1, 500px);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, minmax(200px, auto));
         grid-gap: 10px;
-        grid-template-areas: "block1 block2";
+        grid-template-areas: "block1"
+                             "block2";
     }
 }
 
 .activ
 {
-    height: 200px;
+    height: auto;
     border: 0px white none;
     border-radius: 20px;
     box-shadow: 3px 3px 10px 5px #F2F2F2;
@@ -729,11 +901,11 @@ ul
     overflow: hidden;
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (max-width: 767px)
 {
     .activ
     {
-        height: auto;
+        height: 200px;
     }
 }
 
