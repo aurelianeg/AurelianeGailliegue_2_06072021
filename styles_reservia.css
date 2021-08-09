@@ -157,6 +157,7 @@ nav a
     padding: 35px;
     padding-top: 53px;
     padding-bottom: 53px;
+    border: 3px transparent solid;
 }
 
 .nav_el:hover, .nav_el:active
@@ -170,7 +171,6 @@ nav a
     {
         width: 100%;
         flex-direction: column-reverse;
-        /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX RESPONSIVE NOT WORKING */
     }
 
     #nav_elements
