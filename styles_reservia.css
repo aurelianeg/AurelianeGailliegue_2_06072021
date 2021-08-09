@@ -535,7 +535,7 @@ nav a
 {
     #heb_d
     {
-        width: 835px;
+        width: 61%; /*840px;*/
     }
 }
 
@@ -725,7 +725,7 @@ nav a
 {
     #pop_d
     {
-        width: 375px;
+        width: 27%; /*375px;*/
     }
 }
 
