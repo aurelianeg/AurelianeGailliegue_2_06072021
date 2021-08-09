@@ -282,7 +282,7 @@ nav a
     {
         margin-top: 20px;
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -362,7 +362,7 @@ nav a
     border-radius: 15px;
     padding: 17px;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 0px;
 }
 
@@ -411,7 +411,7 @@ nav a
     flex-direction: row;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .f_icon
@@ -422,7 +422,7 @@ nav a
     height: 21px;
     padding: 15px;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     left: 0px;
 }
 
