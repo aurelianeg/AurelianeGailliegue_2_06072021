@@ -99,7 +99,7 @@ body
 /* =============== HEADER =============== */
 /* ====================================== */
 
-#top_band
+header
 {
     display: flex;
     flex-direction: row;
