@@ -932,7 +932,7 @@ nav a
     width: 100%;
     grid-area: block1;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 500px);
     grid-gap: 10px;
     grid-template-areas: "activ1 activ2and3";
@@ -943,7 +943,7 @@ nav a
     width: 100%;
     grid-area: block2;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 500px);
     grid-gap: 10px;
     grid-template-areas: "activ4 activ5and6";
