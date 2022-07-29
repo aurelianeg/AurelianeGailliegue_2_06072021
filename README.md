@@ -9,12 +9,15 @@ Reservia[^1] is a company giving a planification tool for holidays. Their websit
 ### Website designs
 
 1. Desktop
-![alt text](https://github.com/aurelianeg/reservia/design/desktop_design.png?raw=true)
+
+![Desktop design](./design/desktop_design.png "Desktop design")
 
 2. Mobile
+
 Available in `design/mobile_design.png` if needed.
 
 3. Tablet
+
 The website is adapted to tablets too (no design imposed).
 
 ### Features
